@@ -7,7 +7,7 @@ export default function ProductDetail() {
   const navigate = useNavigate();
 
   const product = location.state;
-  const fromCategory = product?.fromCategory || "All";
+  const fromCategory = product?.fromCategory || "ទាំងអស់";
 
   if (!product) {
     return (
