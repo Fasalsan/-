@@ -26,11 +26,7 @@ export default function ProductDetail() {
   return (
     <div className="max-w-3xl mx-auto p-4 bg-white shadow-lg rounded-lg">
       <button
-        onClick={() =>
-          navigate("/", {
-            state: { selectedCategory: fromCategory },
-          })
-        }
+        onClick={() => navigate(`/?category=${encodeURIComponent(fromCategory)}`)}
         className="px-4 py-2 mb-4 bg-red-700 text-white rounded hover:bg-red-600"
       >
         ត្រឡប់ក្រោយ
