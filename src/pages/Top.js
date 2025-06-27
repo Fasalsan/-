@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import IMG_009 from "../assets/maxresdefault.jpg";
 import { useAuth } from "./AuthContext";
 import { useNavigate } from "react-router-dom";
+import { RiUserShared2Fill } from "react-icons/ri";
 
 export default function Top() {
     const { login } = useAuth();
@@ -18,24 +19,25 @@ export default function Top() {
     };
 
     return (
-        <div className="w-full h-80 sm:h-60 md:h-80 lg:h-96">
-            <div className="relative w-full h-full overflow-hidden">
+        <div className="w-full sm:h-60 md:h-80 lg:h-96">
+            <div className="relative w-full overflow-hidden">
                 <img
                     src={IMG_009}
                     alt="Background"
-                    className="w-full h-full object-cover"
+                    className="w-full h-48 sm:h-56 md:h-72 lg:h-96 xl:h-[500px] object-cover"
+
                 />
 
                 {/* Admin Login Button */}
-                <button
-                    className="absolute top-4 right-4 bg-red-700 hover:bg-red-800 text-white font-semibold py-2 px-4 rounded shadow-lg z-50 transition"
+                <div
+                    className="absolute top-4 right-4 text-white font-semibold    shadow-lg z-50 transition bg-red-900 p-3 rounded-full hover:bg-red-700 cursor-pointer"
                     onClick={() => setShowModal(true)}
                 >
-                    Admin Login
-                </button>
-
+                    <RiUserShared2Fill className="text-lg" />
+                </div>
+                {/* 
                 {/* Overlay with marquee */}
-                <div className="absolute inset-0 bg-black/30 flex items-end justify-center">
+                <div className="absolute inset-0  flex items-end justify-center">
                     <div className="overflow-hidden bg-red-900 bg-opacity-30 w-full">
                         <div className="text-white text-2xl sm:text-4xl font-bold drop-shadow-lg whitespace-nowrap inline-block p-2 font-sans animate-marquee">
                             ទំនាក់ទំនង៖ 081632687
