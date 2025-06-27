@@ -23,12 +23,14 @@ import AdminDashboard from "./pages/AdminDashboard";
 import AdminLogin from "./pages/AdminLogin";
 import ProductList from "./pages/ProductList";
 
+
 export default function App() {
   return (
     <AuthProvider>
       {/* Remove BrowserRouter or Router here */}
       <Routes>
         <Route path="/" element={<ProductList />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route
           path="/admin"
